@@ -1,6 +1,6 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const routes = require("./routes");
+// const routes = require("./routes");
 const PORT = process.env.PORT || 3001;
 const app = express();
 
@@ -12,7 +12,7 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
-app.use(routes);
+// app.use(routes);
 
 const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/textadventure";
 mongoose.connect(MONGODB_URI || { useNewUrlParser: true });
