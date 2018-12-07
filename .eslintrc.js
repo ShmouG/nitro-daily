@@ -5,5 +5,6 @@ module.exports = {
         es6: true,
         mongo: true,
         jest: true,
+        browser: true,
     }
 };
