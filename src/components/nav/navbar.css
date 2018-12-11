@@ -2,7 +2,21 @@
     position: relative;
     left: 30%;
 }
+.jumbotron {
+    position: relative;
+    height: 80vh;
+}
 .groupName {
     position: relative;
     left: 190%;
+}
+.navbar {
+    position: relative;
+    bottom: 20%;
+}
+.dropdown-item {
+    position: relative;
+    padding: 5px;
+    display: inline;
+    text-align: center;
 }
