@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from './logo.svg';
+import Navigation from './components/nav/navbar';
 import './App.css';
 
 function App() {
@@ -23,6 +24,7 @@ and save to reload.
             Learn React
         </a>
       </header>
+      <Navigation />
     </div>
   );
 }
