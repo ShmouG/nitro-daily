@@ -6,5 +6,8 @@ module.exports = {
         mongo: true,
         jest: true,
         browser: true,
-    }
+    },
+rules: {
+    'react/jsx-filename-extension': 0
+}
 };

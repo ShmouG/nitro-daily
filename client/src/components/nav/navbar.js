@@ -17,8 +17,7 @@ export default class Navigation extends React.Component {
     super(props);
 
     this.toggle = this.toggle.bind(this);
-    this.state = {
-    };
+    this.state = false;
   }
 
   toggle() {
@@ -40,16 +39,16 @@ export default class Navigation extends React.Component {
                 </DropdownToggle>
                 <DropdownMenu right>
                   <DropdownItem>
-                    Option 1
+                    Choice 1
                   </DropdownItem>
                   <DropdownItem>
-                    Option 2
+                    Choice 2
                   </DropdownItem>
                   <DropdownItem>
-                    Option 3
+                    Choice 3
                   </DropdownItem>
                   <DropdownItem>
-                    Option 4
+                    Choice 4
                   </DropdownItem>
                   <DropdownItem divider />
                 </DropdownMenu>
