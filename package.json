@@ -1,0 +1,33 @@
+{
+  "name": "nitro-sorcerers-adventure",
+  "version": "1.0.0",
+  "description": "rpg game of awesomeness",
+  "main": "server.js",
+  "scripts": {
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
+    "start:prod": "nodemon server.js",
+    "client": "cd client && npm run start",
+    "seed": "node scripts/seedDB.js",
+    "install": "cd client && npm install",
+    "build": "cd client && npm run build",
+    "heroku-postbuild": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShmouG/nitro-daily.git"
+  },
+  "author": "Nitro Sorcerers",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ShmouG/nitro-daily/issues"
+  },
+  "homepage": "https://github.com/ShmouG/nitro-daily#readme",
+  "dependencies": {
+    "concurrently": "^4.1.0",
+    "express": "^4.16.4",
+    "if-env": "^1.0.4",
+    "mongoose": "^5.3.16",
+    "nodemon": "^1.18.8"
+  }
+}
