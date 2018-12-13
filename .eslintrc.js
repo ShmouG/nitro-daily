@@ -7,7 +7,8 @@ module.exports = {
         jest: true,
         browser: true,
     },
-rules: {
-    'react/jsx-filename-extension': 0
-}
+    rules: {
+        'react/jsx-filename-extension': 0,
+        "indent": ["error", 2]
+    }
 };
