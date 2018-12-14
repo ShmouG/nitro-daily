@@ -1,5 +1,5 @@
 module.exports = {
-    "extends": "airbnb",
+    extends: "airbnb",
     env: {
         node: true,
         es6: true,
@@ -9,5 +9,6 @@ module.exports = {
     },
     rules: {
         'react/jsx-filename-extension': 0,
+        "indent": ["error", 2]
     }
 };
