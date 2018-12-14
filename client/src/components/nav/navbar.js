@@ -53,6 +53,7 @@ export default class Navigation extends React.Component {
                   <DropdownItem divider />
                 </DropdownMenu>
               </UncontrolledDropdown>
+              <NavbarBrand className="userName">User ID: </NavbarBrand>
               <NavbarBrand className="groupName">&#169;Nitro-Sorcerers!</NavbarBrand>
             </Nav>
           </Collapse>
