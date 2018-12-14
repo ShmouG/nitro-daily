@@ -5,9 +5,10 @@ module.exports = {
         es6: true,
         mongo: true,
         jest: true,
-        browser: true,
+        browser: true,  
     },
 rules: {
-    'react/jsx-filename-extension': 0
+    'react/jsx-filename-extension': 0,
+    "indent": ["error", 2]
 }
 };
