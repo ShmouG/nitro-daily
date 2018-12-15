@@ -1,7 +1,9 @@
 .wrapper {
-  border-style: solid; 
+  border-style: solid;
+  padding: 15px; 
   width: 30%;
   margin-top: 15%;
   position: relative;
   left: 50vh;
+  
 }
