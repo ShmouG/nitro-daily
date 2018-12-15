@@ -1,23 +1,24 @@
 import React from 'react';
-import Navigation from './components/Nav/navbar';
-// import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Card from './components/Card/Card';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+// import Nav from './components/Nav';
+import Login from './pages/Login';
+import Interface from './pages/Interface';
+import NoMatch from './pages/NoMatch';
+// import Card from './components/Card/Card'; // use in Interface
 import './App.css';
 
 function App() {
   return (
-    // <Router>
-    <div className="App">
-      <Card />
-      {/* <Switch>
-          <Route exact path="/" component={About} />
-          <Route exact path="/books" component={Books} />
-          <Route exact path="/books/:id" component={Detail} />
+    <Router>
+      <div>
+        {/* <Nav /> */}
+        <Switch>
+          <Route exact path="/" component={Login} />
+          <Route exact path="/game" component={Interface} />
           <Route component={NoMatch} />
-        </Switch> */}
-      <Navigation />
-    </div>
-    /* </Router> */
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
