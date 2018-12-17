@@ -1,15 +1,15 @@
 module.exports = {
-    extends: "airbnb",
-    // parser: "babel-eslint",
+    extends: 'airbnb',
     env: {
         node: true,
         es6: true,
         mongo: true,
         jest: true,
-        browser: true,  
+        browser: true,
     },
     rules: {
         'react/jsx-filename-extension': 0,
-        "indent": ["error", 2]
+        'indent': ['error', 2],
+        'global-require': 1
     }
 };
