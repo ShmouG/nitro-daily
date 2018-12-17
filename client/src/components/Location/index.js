@@ -1,9 +1,8 @@
 import React from 'react';
 
-const LocationName = children => (
-  <div>
-    <p className="locationText">{children}</p>
-  </div>
+
+const Location = place => (
+  <h3>{place}</h3>
 );
 
-export default LocationName;
+export default Location;
