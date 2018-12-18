@@ -15,7 +15,7 @@ class Characters extends Component {
   };
 
   componentDidMount() {
-    this.getCharacters();
+    loadCharacters();
   }
 
   loadCharacters = () => {
