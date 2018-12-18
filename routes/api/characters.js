@@ -10,8 +10,8 @@ router.route('/characters')
 router
   .route('/:id')
   .get(charController.findById)
-  .put(charController.update)
-  .delete(charController.remove);
+  .put(charController.update);
+// .delete(charController.remove);
 
 
 module.exports = router;
