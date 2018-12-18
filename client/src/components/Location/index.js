@@ -1,8 +1,10 @@
 import React from 'react';
 
 
-const Location = place => (
-  <h3>{place}</h3>
-);
+function Location({ children }) {
+  return (
+    <h3>{children}</h3>
+  );
+}
 
 export default Location;
