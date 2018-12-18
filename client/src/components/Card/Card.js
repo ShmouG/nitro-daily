@@ -1,15 +1,15 @@
 import React from 'react';
 import { Jumbotron, Container } from 'reactstrap';
 
-const Card = () => (
+const LocationName = children => (
   <div>
     <Jumbotron fluid>
       <Container fluid>
-        <h1 className="display-3">Main Workspace</h1>
+        <p className="display-3">{children}</p>
       </Container>
     </Jumbotron>
   </div>
 );
 
 
-export default Card;
+export default LocationName;

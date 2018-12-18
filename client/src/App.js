@@ -6,7 +6,6 @@ import Interface from './pages/Interface';
 import NoMatch from './pages/NoMatch';
 import Characters from './pages/Characters';
 // import Card from './components/Card/Card'; // use in Interface
-import './App.css';
 
 function App() {
   return (

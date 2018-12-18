@@ -1,15 +1,15 @@
 import React from 'react';
 import { Button } from 'reactstrap';
+import './style.css';
 
-const Decisions = () => (
-  <div>
-    <Button outline color="primary">Option 1</Button>
-    {' '}
-    <Button outline color="secondary">Option 2</Button>
-    {' '}
-    <Button outline color="success">Option 3</Button>
-    {' '}
-  </div>
-);
+function DecisionButton(props) {
+  return (
+    <div>
+      <Button className="button">Option 1</Button>
+      <Button className="button">Option 2</Button>
+      <Button className="button">Option 3</Button>
+    </div>
+  );
+}
 
-export default Decisions;
+export default DecisionButton;
