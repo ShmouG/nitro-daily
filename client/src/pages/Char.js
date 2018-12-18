@@ -1,11 +1,10 @@
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import { Col, Row, Container } from "../components/Grid";
-import Jumbotron from "../components/Jumbotron";
-import API from "../utils/API";
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import { Col, Row, Container } from '../components/Grid';
+import Jumbotron from '../components/Jumbotron';
+import API from '../utils/API';
 
-class Char extends React.PureComponent {
-
+class Char extends Component {
   state = {
     character: {}
   };
@@ -24,7 +23,11 @@ class Char extends React.PureComponent {
           <Col size="md-12">
             <Jumbotron>
               <h1>
-                {this.state.character.name} by {this.state.character.id}
+                {this.state.character.name}
+{' '}
+by
+{' '}
+{this.state.character.id}
               </h1>
             </Jumbotron>
           </Col>

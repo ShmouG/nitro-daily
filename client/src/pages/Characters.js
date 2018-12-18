@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import API from '../utils/API';
-import Char from './Char';
 import Jumbotron from '../components/Jumbotron';
 import { Input, FormBtn } from '../components/Form';
 import { Col, Row, Container } from '../components/Grid';
@@ -14,9 +13,9 @@ class Characters extends Component {
     id: "",
   };
 
-  componentDidMount() {
-    loadCharacters();
-  }
+  // componentDidMount() {
+    // getCharacters();
+  // }
 
   loadCharacters = () => {
     API.getCharacters()
