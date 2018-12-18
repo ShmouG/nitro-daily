@@ -1,9 +1,31 @@
+* {
+  font-family: 'VT323', monospace;
+}
+
+body {
+  background: black;
+}
+
 .wrapper {
-  border-style: solid;
   padding: 15px; 
-  width: 30%;
+  width: 50%;
   display: flex;
   margin: auto;
-  margin-top: 15%;
-  
+  margin-top: 5%;
+  color: white;
+  /* font-family: 'VT323', monospace; */
+
+}
+
+.card {
+  width: 100%;
+  background-color: black;
+}
+
+.card-body {
+  background-color: black;
+}
+
+.image {
+  /* justify-content: center; */
 }
