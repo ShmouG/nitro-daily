@@ -3,7 +3,6 @@ import {
   Card, CardText, CardBody, CardTitle,
 } from 'reactstrap';
 // import Input from '../Input';
-// import Location from '../../components/Location';
 import DecisionButton from '../../components/DecisionButtons';
 import LocationImage from '../../components/LocationImage';
 import './style.css';

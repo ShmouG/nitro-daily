@@ -2,12 +2,15 @@ import React from 'react';
 import { Button } from 'reactstrap';
 import './style.css';
 
-function DecisionButton(props) {
+function DecisionButton() {
   return (
-    <div>
-      <Button className="button">Option 1</Button>
-      <Button className="button">Option 2</Button>
-      <Button className="button">Option 3</Button>
+    <div className="d-flex justify-content-around ">
+      <Button className="decision" color="success">Option 1</Button>
+      {' '}
+      <Button className="decision" color="success">Option 2</Button>
+      {' '}
+      <Button className="decision" color="success">Option 3</Button>
+      {' '}
     </div>
   );
 }
