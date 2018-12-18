@@ -1,13 +1,8 @@
 import React from 'react';
-import { Card } from 'reactstrap';
 import './style.css';
 
 const LocationImage = () => (
-  <div>
-    <Card>
-      <img width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180" alt="example" className="image" />
-    </Card>
-  </div>
+  <img className="d-flex justify-content-center" width="100%" src="https://i.gzn.jp/img/2014/11/29/1041uuu-gif/04.gif" alt="example" />
 );
 
 export default LocationImage;

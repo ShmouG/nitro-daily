@@ -4,7 +4,7 @@ import './style.css';
 
 function DecisionButton() {
   return (
-    <div className="d-flex justify-content-around ">
+    <div className="d-flex justify-content-around">
       <Button className="decision" color="success">Option 1</Button>
       {' '}
       <Button className="decision" color="success">Option 2</Button>
