@@ -1,0 +1,9 @@
+.wrapper {
+  border-style: solid;
+  padding: 15px; 
+  width: 30%;
+  display: flex;
+  margin: auto;
+  margin-top: 15%;
+  
+}
