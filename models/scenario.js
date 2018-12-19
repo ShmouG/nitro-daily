@@ -1,9 +1,12 @@
 const mongoose = require('mongoose');
 
 const ScenarioSchema = new mongoose.Schema({
-  title: { type: String, required: true },
-  body: { type: String },
-  id: { type: Number, required: true },
+  location: { type: String },
+  context: { type: String, required: true },
+  option1: { type: String },
+  option2: { type: String },
+  option3: { type: String },
+
 });
 
 const Scenario = mongoose.model('Scenario', ScenarioSchema);

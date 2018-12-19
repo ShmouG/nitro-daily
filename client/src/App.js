@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Login from './pages/Login';
 import Interface from './pages/Interface';
 import NoMatch from './pages/NoMatch';
-import Characters from './pages/Characters.js';
+import Characters from './pages/Characters';
 import Char from './pages/Char';
 // import Card from './components/Card/Card'; // use in Interface
 

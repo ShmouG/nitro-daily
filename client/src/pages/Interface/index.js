@@ -44,17 +44,17 @@ class Game extends Component {
     // const { options } = this.state;
     return (
       <div className="wrapper">
-        <Card classname="d-flex justify-content-center">
+        <Card className="d-flex justify-content-center">
           <CardBody>
             <CardTitle>
-              <h3>{location}</h3>
+              {location}
             </CardTitle>
           </CardBody>
           <LocationImage />
           {/* <ActionLog /> */}
           <CardBody>
             <CardText>
-              <p>{context}</p>
+              {context}
             </CardText>
             {/* <Input /> */}
             <DecisionButton />
