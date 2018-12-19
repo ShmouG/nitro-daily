@@ -17,4 +17,7 @@ export default {
   saveCharacter(charData) {
     return axios.post('/characters', charData);
   },
+  getScenario(num) {
+    return axios.get(`/api/scenario/${num}`);
+  },
 };

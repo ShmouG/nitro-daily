@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 
 const ScenarioSchema = new mongoose.Schema({
+  num: { type: Number },
   location: { type: String },
   context: { type: String, required: true },
   option1: { type: String },

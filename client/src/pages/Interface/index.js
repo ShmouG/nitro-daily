@@ -6,21 +6,25 @@ import {
 import DecisionButton from '../../components/DecisionButtons';
 import LocationImage from '../../components/LocationImage';
 import './style.css';
+import API from '../../utils/API';
 
 class Game extends Component {
   // mock state
   constructor(props) {
     super(props);
     this.state = {
-      location: 'Coffee Shop',
-      context: 'Here\'s some information',
+      scenario: {},
+      // location: 'Coffee Shop',
+      // context: 'Here\'s some information',
       // options: ['option1', 'option2', 'option3'],
     };
   }
 
-  // componentDidMount() {
-  //   this.loadInfo();
-  // }
+  componentDidMount() {
+    API.getScenario(this.props.match.params.num)
+      .then(res => this.setState({ scenario: res.data }))
+      .catch(err => console.log(err));
+  }
 
   // Getting info for the books
   // loadInfo = () => {
@@ -39,8 +43,9 @@ class Game extends Component {
 
 
   render() {
-    const { location } = this.state;
-    const { context } = this.state;
+    const { scenario } = this.state;
+    const { location } = scenario.location;
+    const { context } = scenario.context;
     // const { options } = this.state;
     return (
       <div className="wrapper">
