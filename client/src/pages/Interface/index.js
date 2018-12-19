@@ -21,18 +21,23 @@ class Game extends Component {
   }
 
   componentDidMount() {
-    API.getScenario(this.props.match.params.num)
-      .then(res => this.setState({ scenario: res.data }))
-      .catch(err => console.log(err));
+    this.loadScenario
+  }
+  
+  loadScenario = () => {
+    API.getScenario(this.props.match.params.id)
+    .then(res => this.setState({ scenario: res.data }))
+    .catch(err => console.log(err));
   }
 
   // Getting info for the books
-  // loadInfo = () => {
-  //   API.getInfo()
+  // loadScenario = () => {
+  //   API.getScenario()
   //     .then(res => this.setState({ location: res.location, context: res.context }))
   //     .catch(err => console.log(err));
   // };
 
+  // This is for generating buttons
   // handleChoice(i) {
   //   // const { history } = this.state;
   //   // const { current } = history[]
