@@ -16,6 +16,7 @@ function Login() {
         <Input type="password" name="password" id="examplePassword" placeholder="don't tell!" />
       </FormGroup>
       <Button>Submit</Button>
+      <Button className="newUser">  New User? </Button>
     </Form>
   );
 }
