@@ -8,7 +8,7 @@ mongoose.connect(
 
 const scenarioSeed = [
   {
-    scenario: 'Get out of Bed',
+    context: 'Get out of Bed',
     option1: 'Wake up and spring out of bed',
     option2: 'Roll over and go back to sleep',
     option3: 'Wish for death and try to find the will to face another day',
