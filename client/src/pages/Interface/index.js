@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import {
-  Card, CardText, CardBody, CardTitle,
+  Card, CardText, CardBody, CardTitle, Button,
 } from 'reactstrap';
 // import Input from '../Input';
-import DecisionButton from '../../components/DecisionButtons';
+// import DecisionButton from '../../components/DecisionButtons';
 import LocationImage from '../../components/LocationImage';
 import './style.css';
 import API from '../../utils/API';
@@ -21,21 +21,16 @@ class Game extends Component {
   }
 
   componentDidMount() {
-    this.loadScenario
-  }
-  
-  loadScenario = () => {
-    API.getScenario(this.props.match.params.id)
-    .then(res => this.setState({ scenario: res.data }))
-    .catch(err => console.log(err));
+    this.loadScenario();
   }
 
-  // Getting info for the books
-  // loadScenario = () => {
-  //   API.getScenario()
-  //     .then(res => this.setState({ location: res.location, context: res.context }))
-  //     .catch(err => console.log(err));
-  // };
+  loadScenario = () => {
+    // const { sceneProps } = this.state;
+    API.getScenarios()
+      .then(res => this.setState({ scenario: res.data[0] }))
+      .catch(err => console.log(err));
+  }
+
 
   // This is for generating buttons
   // handleChoice(i) {
@@ -49,8 +44,12 @@ class Game extends Component {
 
   render() {
     const { scenario } = this.state;
-    const { location } = scenario.location;
-    const { context } = scenario.context;
+    const { location } = scenario;
+    const { context } = scenario;
+    const { option1 } = scenario;
+    const { option2 } = scenario;
+    const { option3 } = scenario;
+
     // const { options } = this.state;
     return (
       <div className="wrapper">
@@ -64,10 +63,15 @@ class Game extends Component {
           {/* <ActionLog /> */}
           <CardBody>
             <CardText>
+              {/* {this.state.scenario.context} */}
               {context}
             </CardText>
             {/* <Input /> */}
-            <DecisionButton />
+            <div className="d-flex flex-column">
+              <Button className="decision" color="success">{option1}</Button>
+              <Button className="decision" color="success">{option2}</Button>
+              <Button className="decision" color="success">{option3}</Button>
+            </div>
           </CardBody>
         </Card>
       </div>

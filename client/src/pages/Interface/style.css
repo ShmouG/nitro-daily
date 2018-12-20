@@ -29,3 +29,12 @@ body {
 .image {
   /* justify-content: center; */
 }
+
+.btn-success {
+  margin: 5px;
+  /* justify-content: center; */
+}
+
+.card-title {
+  font-size: 20pt;
+}
