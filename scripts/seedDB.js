@@ -21,7 +21,7 @@ const scenarioSeed = [
     "option1": "Wake up and spring out of bed",
     "option2": "Roll over and go back to sleep",
     "option3": "Wish for death and try to find the will to face another day",
-    "location": "Start your day: [Location: Bedroom]"
+    "location": "Bedroom"
   },
   {
     "id": 2,
@@ -29,7 +29,7 @@ const scenarioSeed = [
     "option1": "Stop messing around with this app and call for help",
     "option2": "Scratch your itch",
     "option3": "Take a selfie",
-    "location": "Start your day: [Location: Bedroom]"
+    "location": "Bedroom"
   },
   {
     "id": 2,
@@ -37,7 +37,7 @@ const scenarioSeed = [
     "option1": "You call your mom and she gets you free",
     "option2": "",
     "option3": "",
-    "location": "Start your day: [Location: Bedroom]"
+    "location": "Bedroom"
   },
   {
     "id": 3,
@@ -45,7 +45,7 @@ const scenarioSeed = [
     "option1": "Attempt to free yourself",
     "option2": "Call for help!",
     "option3": "Cry and admit defeat",
-    "location": "Start your day: [Location: Bedroom]"
+    "location": "Bedroom"
   },
   {
     "id": 4,
@@ -53,7 +53,7 @@ const scenarioSeed = [
     "option1": "Attempt to free yourself",
     "option2": "Call for help!",
     "option3": "Cry and admit defeat",
-    "location": "Start your day: [Location: Bedroom]"
+    "location": "Bedroom"
   },
 ];
 
