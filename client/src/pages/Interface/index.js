@@ -59,7 +59,7 @@ class Game extends Component {
               {location}
             </CardTitle>
           </CardBody>
-          <LocationImage />
+          <LocationImage location={location} />
           {/* <ActionLog /> */}
           <CardBody>
             <CardText>
