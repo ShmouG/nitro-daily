@@ -20,7 +20,7 @@ app.use('/', routes, (req, res) => {
 });
 
 const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost/textadventure';
-mongoose.connect(MONGODB_URI || { useNewUrlParser: true });
+mongoose.connect(MONGODB_URI, useNewUrlParser: true });
 
 app.listen(PORT, () => {
   console.log(`🌎 ==> Server now on port ${PORT}!`);
