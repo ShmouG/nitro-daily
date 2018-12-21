@@ -8,9 +8,13 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   },
   findById(req, res) {
+    console.log(req.params.id)
     db.Scenario
-      .findById(req.params.id)
-      .then(dbModel => res.json(dbModel))
+      .find({id: parseInt(req.params.id) })
+      .then(dbModel => {
+        console.log(dbModel);
+        res.json(dbModel);
+      })
       .catch(err => res.status(422).json(err));
   },
 };

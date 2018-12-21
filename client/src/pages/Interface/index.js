@@ -27,7 +27,16 @@ class Game extends Component {
   loadScenario = () => {
     // const { sceneProps } = this.state;
     API.getScenarios()
+      .then(res => this.setState({ scenario: res.data[2] }))
+      .catch(err => console.log(err));
+  }
+
+  newLoadScenario = (id) => {
+    // const { sceneProps } = this.state;
+    console.log(id);
+    API.getScenario(id)
       .then(res => this.setState({ scenario: res.data[0] }))
+      // this.setState({ scenario: res.data }))
       .catch(err => console.log(err));
   }
 
@@ -49,6 +58,7 @@ class Game extends Component {
     const { option1 } = scenario;
     const { option2 } = scenario;
     const { option3 } = scenario;
+    const { id } = scenario;
 
     // const { options } = this.state;
     return (
@@ -68,9 +78,9 @@ class Game extends Component {
             </CardText>
             {/* <Input /> */}
             <div className="d-flex flex-column">
-              <Button className="decision" color="success">{option1}</Button>
-              <Button className="decision" color="success">{option2}</Button>
-              <Button className="decision" color="success">{option3}</Button>
+              <Button className="decision" color="success" onClick={() => this.newLoadScenario(1)}>{option1}</Button>
+              <Button className="decision" color="success" onClick={() => this.newLoadScenario(2)}>{option2}</Button>
+              <Button className="decision" color="success" onClick={() => this.newLoadScenario(3)}>{option3}</Button>
             </div>
           </CardBody>
         </Card>
