@@ -13,9 +13,9 @@ export default {
   // //   return axios.delete(`/api/characters/${id}`);
   // // },
   // // Saves a book to the database
-  // saveCharacter(charData) {
-  //   return axios.post('/characters', charData);
-  // },
+  saveUser(save) {
+    return axios.post('/characters', save);
+  },
   getScenario(id) {
     return axios.get(`/api/scenario/${id}`);
   },
