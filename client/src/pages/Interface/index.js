@@ -27,7 +27,7 @@ class Game extends Component {
   loadScenario = () => {
     // const { sceneProps } = this.state;
     API.getScenarios()
-      .then(res => this.setState({ scenario: res.data[0] }))
+      .then(res => this.setState({ scenario: res.data[4] }))
       .catch(err => console.log(err));
   }
 
@@ -59,7 +59,7 @@ class Game extends Component {
               {location}
             </CardTitle>
           </CardBody>
-          <LocationImage />
+          <LocationImage location={location} />
           {/* <ActionLog /> */}
           <CardBody>
             <CardText>
