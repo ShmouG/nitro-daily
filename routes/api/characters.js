@@ -1,10 +1,13 @@
-// const router = require('express').Router();
-// const charController = require('../../controller/charController');
+const router = require('express').Router();
+const charController = require('../../controller/charController');
+const scenarioController = require('../../controller/scenarioController');
 
-// //  "/api/characters"
-// router.route('/characters')
-//   .get(charController.findAll)
-//   .post(charController.create);
+router.route('/')
+  .get(scenarioController.findAll);
+
+router.route('/characters')
+  .get(charController.findAll)
+  .post(charController.create);
 
 // // "/api/character/:id"
 // router
@@ -12,6 +15,6 @@
 //   .get(charController.findById)
 //   .put(charController.update);
 // // .delete(charController.remove);
+// '/api/scenario'
 
-
-// module.exports = router;
+module.exports = router;

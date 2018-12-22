@@ -21,10 +21,10 @@ class Login extends Component {
       <div className="wrapper">
         <Form inline>
           <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
-            <Label htmlFor="game" for="exampleEmail" className="mr-sm-2">Email</Label>
+            <Label for="exampleEmail" className="mr-sm-2">Email</Label>
             <Input
               onChange={this.handleInputChange}
-              value={email}
+              value={email.email}
               type="email"
               name="email"
               id="exampleEmail"
@@ -35,7 +35,7 @@ class Login extends Component {
             <Label for="examplePassword" className="mr-sm-2">Password</Label>
             <Input
               onChange={this.handleInputChange}
-              // value={pw}
+              value={pw.pw}
               type="password"
               name="pw"
               id="examplePassword"

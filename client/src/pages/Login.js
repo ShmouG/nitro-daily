@@ -5,18 +5,23 @@ import API from '../utils/API';
 
 
 const handleInputChange = (event) => {
-  this.setState = ({ save: event.target.value });
+  const { name, value } = event.target;
+  this.setState({
+    [name]: value,
+  });
 };
 
 const handleFormSubmit = (event) => {
   event.preventDefault();
-  API.saveUser(event)
+  API.saveUser({
+    email: this.state.email,
+    pw: this.state.pw,
+  })
     .then((res) => {
       if (res.data.status === 'error') {
         throw new Error(res.data.message);
       }
-      this.setState({ results: res.data.message, error: '' });
-      console.log(res);
+      // this.setState({ results: res.data.message, error: '' });
     })
     .catch(err => this.setState({ error: err.message }));
 };
@@ -27,8 +32,8 @@ const Example = () => (
       <Container fluid>
         <h3 className="display-3">Login</h3>
         <LoginForm
-          handleFormSubmit={handleFormSubmit}
           handleInputChange={handleInputChange}
+          handleFormSubmit={handleFormSubmit}
         />
       </Container>
     </Jumbotron>

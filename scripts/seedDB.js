@@ -56,7 +56,13 @@ const scenarioSeed = [
     "location": "Bedroom"
   },
 ];
-
+const charSeed = [
+  {
+    "id": 0,
+    "email": "blahblah@email.com",
+    "pw": "123345667",
+  },
+];
 db.Scenario
   .remove({})
   .then(() => db.Scenario.collection.insertMany(scenarioSeed))
@@ -67,4 +73,16 @@ db.Scenario
   .catch((err) => {
     console.error(err);
     process.exit(1);
-  });
+  })
+
+  // db.Chars
+  // .remove({})
+  // .then(() => db.Chars.collection.insert(charSeed))
+  // .then((data) => {
+  //   console.log(`${data.result.n} records inserted!`);
+  //   process.exit(0);
+  // })
+  // .catch((err) => {
+  //   console.error(err);
+  //   process.exit(1);
+  // })
