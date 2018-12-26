@@ -1,9 +1,9 @@
 import axios from 'axios';
 
 export default {
-  // getCharacters() {
-  //   return axios.get('/characters');
-  // },
+  startGame() {
+    return axios.get('/game');
+  },
   // // Gets the book with the given id
   // getCharacterbyID(id) {
   //   return axios.get(`/characters/${id}`);
@@ -13,9 +13,9 @@ export default {
   // //   return axios.delete(`/api/characters/${id}`);
   // // },
   // // Saves a book to the database
-  // saveCharacter(charData) {
-  //   return axios.post('/characters', charData);
-  // },
+  saveUser(save) {
+    return axios.post('/api/characters', save);
+  },
   getScenario(id) {
     return axios.get(`/api/scenario/${id}`);
   },

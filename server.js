@@ -1,12 +1,14 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const path = require('path');
+const logger = require("morgan");
 const routes = require('./routes');
 const db = mongoose.connection;
 
 const PORT = process.env.PORT || 3001;
 const app = express();
 
+app.use(logger("dev"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
@@ -20,9 +22,6 @@ app.use('/', routes, (req, res) => {
 });
 
 const databaseUri = 'mongodb://localhost/textadventure'
-
-// const MONGODB_URI = process.env.MONGODB_URI;
-// mongoose.connect(MONGODB_URI || { useNewUrlParser: true });
 
 if (process.env.MONGODB_URI) {
   mongoose.connect(process.env.MONGODB_URI)
