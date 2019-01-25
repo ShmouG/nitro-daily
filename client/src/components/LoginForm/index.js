@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Route } from 'react-router-dom';
+// import { BrowserRouter as Route } from 'react-router-dom';
 import {
-  Button, Form, FormGroup, Label, Input,
+  Form, FormGroup, Label, Input,
 } from 'reactstrap';
-import Interface from '../../pages/Interface';
+// import Interface from '../../pages/Interface';
 
 class Login extends Component {
   constructor(props) {
@@ -43,7 +43,7 @@ class Login extends Component {
               placeholder="don't tell!"
             />
           </FormGroup>
-          <Button type="submit" onClick= {href="/Interface"}>Submit</Button>
+          {/* <Button type="submit" onClick={href="/Interface"}>Submit</Button> */}
           {/* <Button className="newUser">  New User? </Button> */}
         </Form>
       </div>
