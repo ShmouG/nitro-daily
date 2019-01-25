@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
+// import { BrowserRouter as Route } from 'react-router-dom';
 import {
-  Button, Form, FormGroup, Label, Input,
+  Form, FormGroup, Label, Input,
 } from 'reactstrap';
+// import Interface from '../../pages/Interface';
 
-// This will be changed to a class with state later
 class Login extends Component {
   constructor(props) {
     super(props);
@@ -42,8 +43,8 @@ class Login extends Component {
               placeholder="don't tell!"
             />
           </FormGroup>
-          <Button type="submit" onClick={this.handleFormSubmit}>Submit</Button>
-          <Button className="newUser">  New User? </Button>
+          {/* <Button type="submit" onClick={href="/Interface"}>Submit</Button> */}
+          {/* <Button className="newUser">  New User? </Button> */}
         </Form>
       </div>
     );
