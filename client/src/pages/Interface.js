@@ -4,9 +4,8 @@ import {
 } from 'reactstrap';
 // import Input from '../Input';
 // import DecisionButton from '../../components/DecisionButtons';
-import LocationImage from '../../components/LocationImage';
-import './style.css';
-import API from '../../utils/API';
+import LocationImage from '../components/LocationImage';
+import API from '../utils/API';
 
 class Game extends Component {
   // mock state

@@ -1,6 +1,5 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Login from './pages/Login';
 import Interface from './pages/Interface';
 import NoMatch from './pages/NoMatch';
 import Characters from './pages/Characters';
@@ -12,8 +11,7 @@ function App() {
     <Router>
       <div>
         <Switch>
-          <Route exact path="/" component={Login} />
-          <Route exact path="/game" component={Interface} />
+          <Route exact path="/home" component={Interface} />
           <Route exact path="/characters" component={Characters} />
           <Route exact path="/characters/:id" component={Char} />
           <Route component={NoMatch} />

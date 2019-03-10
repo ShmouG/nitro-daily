@@ -6,8 +6,9 @@ import API from '../utils/API';
 
 class Char extends Component {
   state = {
-    character: {}
+    character: {},
   };
+
   // When this component mounts, grab the book with the _id of this.props.match.params.id
   // e.g. localhost:3000/books/599dcb67f0f16317844583fc
   componentDidMount() {
@@ -24,10 +25,10 @@ class Char extends Component {
             <Jumbotron>
               <h1>
                 {this.state.character.name}
-{' '}
+                {' '}
 by
-{' '}
-{this.state.character.id}
+                {' '}
+                {this.state.character.id}
               </h1>
             </Jumbotron>
           </Col>

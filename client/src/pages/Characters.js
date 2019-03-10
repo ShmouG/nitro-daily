@@ -9,17 +9,17 @@ import { List, ListItem } from '../components/List';
 class Characters extends Component {
   state = {
     characters: [],
-    name: "",
-    id: "",
+    name: '',
+    id: '',
   };
 
   // componentDidMount() {
-    // getCharacters();
+  // getCharacters();
   // }
 
   loadCharacters = () => {
     API.getCharacters()
-      .then(res => this.setState({ characters: res.data, name: '', id: '' }) )
+      .then(res => this.setState({ characters: res.data, name: '', id: '' }))
       .catch(err => console.log(err));
   }
 
@@ -83,16 +83,14 @@ class Characters extends Component {
             </Jumbotron>
             {this.state.characters.length ? (
               <List>
-                {this.state.books.map(character => {
-                  return (
-                <ListItem key={character._id}>
-                  <Link to={`/characters/${character._id}`}>
-                    {character.name}
-                    {character.id}
-                  </Link>
-                </ListItem>
-                )
-              })}
+                {this.state.books.map(character => (
+                  <ListItem key={character._id}>
+                    <Link to={`/characters/${character._id}`}>
+                      {character.name}
+                      {character.id}
+                    </Link>
+                  </ListItem>
+                ))}
               </List>
             ) : (
               <h3>No Results to Display</h3>
